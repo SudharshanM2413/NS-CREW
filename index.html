@@ -1,0 +1,881 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Basic Meta -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Title & SEO -->
+    <title>NS Crews | Professional Video Shoots, Editing & Brand Content</title>
+    <meta name="description" content="NS Crews is a young and creative visual media company founded by M. Surya. We specialize in professional video shoots, video editing, brand content, and social media visuals.">
+    <meta name="keywords" content="NS Crews, Video Shoot, Video Editing, Social Media Visuals, Brand Content, M. Surya, Cinematic Videos, Reels Editing, Product Shoot">
+    <meta name="author" content="NS Crews">
+    <link rel="canonical" href="https://nscrews.com/">
+
+    <!-- Open Graph for Social Sharing -->
+    <meta property="og:title" content="NS Crews | Visuals That Speak. Stories That Stay.">
+    <meta property="og:description" content="Turning ideas into visual stories. Professional video shoots, video editing, and social media visuals by NS Crews.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://nscrews.com/">
+    
+    <!-- Google Fonts: Syne (Artistic, bold headings) & Outfit (Modern, geometric body) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Syne:wght@700;800&display=swap" rel="stylesheet">
+
+    <!-- FontAwesome Icons for modern visuals -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Custom CSS Link -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Local Business Schema for Local SEO -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "NS Crews",
+        "url": "https://nscrews.com",
+        "logo": "",
+        "description": "Professional video shoots, video editing, brand content, and social media visuals.",
+        "founder": {
+            "@type": "Person",
+            "name": "M. Surya"
+        },
+        "knowsAbout": ["Video Production", "Video Editing", "Social Media Content", "Product Videography", "Personal Branding"],
+        "priceRange": "$$"
+    }
+    </script>
+</head>
+<body>
+
+    <!-- Header / Navigation -->
+    <header class="main-header">
+        <div class="container header-container">
+            <a href="#" class="logo">
+                <span class="logo-accent">NS</span> CREWS
+            </a>
+            
+            <nav class="nav-menu" id="navMenu">
+                <ul>
+                    <li><a href="#" class="nav-link active">Home</a></li>
+                    <li><a href="#about" class="nav-link">About</a></li>
+                    <li><a href="#services" class="nav-link">Services</a></li>
+                    <li><a href="#process" class="nav-link">Our Approach</a></li>
+                    <li><a href="#work" class="nav-link">Our Work</a></li>
+                    <li><a href="#contact" class="nav-link nav-btn">Let's Work</a></li>
+                </ul>
+            </nav>
+
+            <button class="hamburger" id="hamburgerBtn" aria-label="Toggle menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="hero-bg-overlay"></div>
+        <div class="container hero-container">
+            <div class="hero-content">
+                <span class="hero-tagline">Visuals That Speak. Stories That Stay.</span>
+                <h1 class="hero-title">Turning Ideas Into <span class="text-gradient">Visual Stories</span></h1>
+                <p class="hero-subtitle">We are a young and creative visual media company focused on professional video shoots, video editing, brand content, and social media visuals.</p>
+                <div class="hero-actions">
+                    <a href="#work" class="btn btn-primary">Explore Our Work</a>
+                    <a href="#contact" class="btn btn-secondary">Get in Touch</a>
+                </div>
+                <div class="hero-credits">
+                    <span class="credits-text">Founded by <span class="credits-name">M. Surya</span></span>
+                </div>
+            </div>
+            
+            <!-- Hero Video Space (Styled Empty Video Container) -->
+            <div class="hero-video-wrapper scroll-reveal">
+                <div class="video-placeholder focus-target">
+                    <!-- Autofocus corner brackets -->
+                    <div class="focus-bracket bracket-tl"></div>
+                    <div class="focus-bracket bracket-tr"></div>
+                    <div class="focus-bracket bracket-bl"></div>
+                    <div class="focus-bracket bracket-br"></div>
+                    
+                    <!-- Viewfinder HUD -->
+                    <div class="viewfinder-hud">
+                        <div class="hud-top">
+                            <div class="hud-rec"><span class="rec-dot"></span>REC</div>
+                            <div class="hud-battery"><i class="fa-solid fa-battery-three-quarters"></i> 98%</div>
+                        </div>
+                        <div class="hud-grid-lines">
+                            <div class="grid-line line-h1"></div>
+                            <div class="grid-line line-h2"></div>
+                            <div class="grid-line line-v1"></div>
+                            <div class="grid-line line-v2"></div>
+                        </div>
+                        <div class="hud-center"><div class="hud-crosshair"></div></div>
+                        <div class="hud-bottom">
+                            <div class="hud-settings">1/120s &nbsp; F2.8 &nbsp; ISO 200</div>
+                            <div class="hud-format">4K HDR &nbsp; 60fps &nbsp; 35mm</div>
+                        </div>
+                    </div>
+
+                    <div class="video-overlay">
+                        <div class="play-btn-circle" onclick="openVideoModal('https://www.w3schools.com/html/mov_bbb.mp4')">
+                            <i class="fa-solid fa-play"></i>
+                        </div>
+                        <span class="play-label">Watch Showreel</span>
+                        <div class="video-info-badge">
+                            <i class="fa-solid fa-film"></i> NS Crews Showreel 2026
+                        </div>
+                    </div>
+                    <!-- Empty/Fallback video container (Add your video source path here) -->
+                    <video class="placeholder-video-tag" loop muted autoplay playsinline>
+                        <source src="" type="video/mp4">
+                    </video>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats-section">
+        <div class="container stats-container">
+            <div class="stats-grid">
+                <div class="stat-item scroll-reveal">
+                    <div class="stat-number-wrapper">
+                        <span class="stat-num" data-target="1">0</span><span class="stat-plus">+</span>
+                    </div>
+                    <span class="stat-label">Year of Experience</span>
+                </div>
+                <div class="stat-item scroll-reveal" style="transition-delay: 0.1s;">
+                    <div class="stat-number-wrapper">
+                        <span class="stat-num" data-target="10">0</span><span class="stat-plus">+</span>
+                    </div>
+                    <span class="stat-label">Business Partners</span>
+                </div>
+                <div class="stat-item scroll-reveal" style="transition-delay: 0.2s;">
+                    <div class="stat-number-wrapper">
+                        <span class="stat-num" data-target="100">0</span><span class="stat-plus">+</span>
+                    </div>
+                    <span class="stat-label">Creative Projects</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about-section section-padding">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-content scroll-reveal">
+                    <span class="section-tag">About NS Crews</span>
+                    <h2 class="section-title">Turning Ideas Into <span class="text-gradient">Visual Stories</span></h2>
+                    <p class="about-desc">At NS Crews, we believe every brand has a story worth telling. We specialize in creating high-quality videos and creative visual content that help businesses present themselves professionally and build a strong digital presence.</p>
+                    <p class="about-desc">From capturing the right moment to creating the final edited video, we handle every stage with attention to detail. Our goal is simple:</p>
+                    <div class="goal-badges">
+                        <div class="goal-badge">Create</div>
+                        <div class="goal-badge">Capture</div>
+                        <div class="goal-badge">Edit</div>
+                        <div class="goal-badge">Elevate</div>
+                    </div>
+                </div>
+                <div class="about-quote-card scroll-reveal focus-target" style="transition-delay: 0.2s;">
+                    <!-- Autofocus corner brackets -->
+                    <div class="focus-bracket bracket-tl"></div>
+                    <div class="focus-bracket bracket-tr"></div>
+                    <div class="focus-bracket bracket-bl"></div>
+                    <div class="focus-bracket bracket-br"></div>
+                    
+                    <div class="quote-header-box">
+                        <div class="quote-icon"><i class="fa-solid fa-quote-left"></i></div>
+                        <!-- SVG Camera Lens Aperture Graphic -->
+                        <div class="lens-aperture-wrapper">
+                            <svg class="lens-aperture-svg" viewBox="0 0 100 100">
+                                <circle cx="50" cy="50" r="46" stroke="currentColor" stroke-width="2" fill="none" class="lens-ring" />
+                                <circle cx="50" cy="50" r="41" stroke="currentColor" stroke-width="0.5" stroke-dasharray="2 2" fill="none" class="lens-ring-dash" />
+                                <g class="aperture-blades">
+                                    <polygon points="50,15 78,31 62,47 43,31" class="blade" />
+                                    <polygon points="78,31 78,63 56,55 56,39" class="blade" />
+                                    <polygon points="78,63 50,79 42,59 56,55" class="blade" />
+                                    <polygon points="50,79 22,63 38,47 58,63" class="blade" />
+                                    <polygon points="22,63 22,31 44,39 44,55" class="blade" />
+                                    <polygon points="22,31 50,15 58,35 44,39" class="blade" />
+                                </g>
+                                <circle cx="50" cy="50" r="2.5" fill="#ff3b30" />
+                            </svg>
+                            <div class="lens-label">50mm F/1.2</div>
+                        </div>
+                    </div>
+                    
+                    <p class="quote-text">Start Small. Create Big.</p>
+                    <div class="quote-author">
+                        <div class="author-info">
+                            <span class="author-name">M. Surya</span>
+                            <span class="author-role">Founder — NS Crews</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- What We Do / Services Section -->
+    <section id="services" class="services-section section-padding">
+        <div class="container">
+            <div class="section-header text-center scroll-reveal">
+                <span class="section-tag">What We Do?</span>
+                <h2 class="section-title">Services that Elevate Your Brand</h2>
+            </div>
+            
+            <div class="services-grid">
+                <!-- Service 1 -->
+                <div class="service-card scroll-reveal focus-target">
+                    <!-- Autofocus corner brackets -->
+                    <div class="focus-bracket bracket-tl"></div>
+                    <div class="focus-bracket bracket-tr"></div>
+                    <div class="focus-bracket bracket-bl"></div>
+                    <div class="focus-bracket bracket-br"></div>
+                    <div class="service-icon">
+                        <i class="fa-solid fa-video"></i>
+                    </div>
+                    <h3 class="service-title">Professional Video Shoot</h3>
+                    <p class="service-text">Creative and professional video production for brands, businesses, events, products, and social media.</p>
+                </div>
+                
+                <!-- Service 2 -->
+                <div class="service-card scroll-reveal focus-target" style="transition-delay: 0.1s;">
+                    <!-- Autofocus corner brackets -->
+                    <div class="focus-bracket bracket-tl"></div>
+                    <div class="focus-bracket bracket-tr"></div>
+                    <div class="focus-bracket bracket-bl"></div>
+                    <div class="focus-bracket bracket-br"></div>
+                    <div class="service-icon">
+                        <i class="fa-solid fa-scissors"></i>
+                    </div>
+                    <h3 class="service-title">Video Editing</h3>
+                    <p class="service-text">Dynamic and engaging video editing with smooth transitions, storytelling, sound design, color correction, and social-media-ready formats.</p>
+                </div>
+
+                <!-- Service 3 -->
+                <div class="service-card scroll-reveal focus-target" style="transition-delay: 0.2s;">
+                    <!-- Autofocus corner brackets -->
+                    <div class="focus-bracket bracket-tl"></div>
+                    <div class="focus-bracket bracket-tr"></div>
+                    <div class="focus-bracket bracket-bl"></div>
+                    <div class="focus-bracket bracket-br"></div>
+                    <div class="service-icon">
+                        <i class="fa-solid fa-mobile-screen-button"></i>
+                    </div>
+                    <h3 class="service-title">Social Media Content</h3>
+                    <p class="service-text">Short-form videos, Reels, promotional content, and engaging visuals designed to improve online presence.</p>
+                </div>
+
+                <!-- Service 4 -->
+                <div class="service-card scroll-reveal focus-target">
+                    <!-- Autofocus corner brackets -->
+                    <div class="focus-bracket bracket-tl"></div>
+                    <div class="focus-bracket bracket-tr"></div>
+                    <div class="focus-bracket bracket-bl"></div>
+                    <div class="focus-bracket bracket-br"></div>
+                    <div class="service-icon">
+                        <i class="fa-solid fa-bag-shopping"></i>
+                    </div>
+                    <h3 class="service-title">Product & Brand Videos</h3>
+                    <p class="service-text">Creative product shoots and promotional videos that showcase products in an attractive and professional way.</p>
+                </div>
+
+                <!-- Service 5 -->
+                <div class="service-card scroll-reveal focus-target" style="transition-delay: 0.1s;">
+                    <!-- Autofocus corner brackets -->
+                    <div class="focus-bracket bracket-tl"></div>
+                    <div class="focus-bracket bracket-tr"></div>
+                    <div class="focus-bracket bracket-bl"></div>
+                    <div class="focus-bracket bracket-br"></div>
+                    <div class="service-icon">
+                        <i class="fa-solid fa-clapperboard"></i>
+                    </div>
+                    <h3 class="service-title">Event & Function Coverage</h3>
+                    <p class="service-text">Capturing important moments from events, celebrations, functions, and special occasions with a cinematic approach.</p>
+                </div>
+
+                <!-- Service 6 -->
+                <div class="service-card scroll-reveal focus-target" style="transition-delay: 0.2s;">
+                    <!-- Autofocus corner brackets -->
+                    <div class="focus-bracket bracket-tl"></div>
+                    <div class="focus-bracket bracket-tr"></div>
+                    <div class="focus-bracket bracket-bl"></div>
+                    <div class="focus-bracket bracket-br"></div>
+                    <div class="service-icon">
+                        <i class="fa-solid fa-bullhorn"></i>
+                    </div>
+                    <h3 class="service-title">Promotional Videos</h3>
+                    <p class="service-text">Creative promotional videos designed to communicate your brand message and attract potential customers.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why NS Crews Section -->
+    <section class="why-section section-padding">
+        <div class="container">
+            <div class="why-grid">
+                <div class="why-visual scroll-reveal">
+                    <!-- Video Editing Timeline Widget -->
+                    <div class="timeline-widget-container focus-target">
+                        <!-- Autofocus corner brackets -->
+                        <div class="focus-bracket bracket-tl"></div>
+                        <div class="focus-bracket bracket-tr"></div>
+                        <div class="focus-bracket bracket-bl"></div>
+                        <div class="focus-bracket bracket-br"></div>
+                        
+                        <div class="timeline-header">
+                            <div class="timeline-circle red"></div>
+                            <div class="timeline-circle yellow"></div>
+                            <div class="timeline-circle green"></div>
+                            <span class="timeline-title"><i class="fa-solid fa-clapperboard"></i> ns_crews_timeline.prproj</span>
+                            <div class="timeline-timecode">00:00:02:24</div>
+                        </div>
+                        
+                        <div class="timeline-body">
+                            <!-- Ruler -->
+                            <div class="timeline-ruler">
+                                <div class="ruler-mark" style="left: 0%">00s</div>
+                                <div class="ruler-mark" style="left: 25%">02s</div>
+                                <div class="ruler-mark" style="left: 50%">04s</div>
+                                <div class="ruler-mark" style="left: 75%">06s</div>
+                                <div class="ruler-mark" style="left: 100%">08s</div>
+                                <!-- Playhead line -->
+                                <div class="timeline-playhead" id="timelinePlayhead">
+                                    <div class="playhead-head"></div>
+                                    <div class="playhead-line"></div>
+                                </div>
+                            </div>
+                            
+                            <!-- Track V2: FX & Text -->
+                            <div class="timeline-track-row">
+                                <div class="track-label"><i class="fa-solid fa-wand-magic-sparkles"></i> V2 FX</div>
+                                <div class="track-clips">
+                                    <div class="clip clip-fx" style="left: 15%; width: 35%;">Color Grading</div>
+                                    <div class="clip clip-fx" style="left: 65%; width: 28%;">Text Overlay</div>
+                                </div>
+                            </div>
+                            
+                            <!-- Track V1: Video Shoot -->
+                            <div class="timeline-track-row">
+                                <div class="track-label"><i class="fa-solid fa-video"></i> V1 Video</div>
+                                <div class="track-clips">
+                                    <div class="clip clip-video" style="left: 0%; width: 22%;">01_Intro</div>
+                                    <div class="clip clip-video" style="left: 24%; width: 38%;">02_Product_B-Roll</div>
+                                    <div class="clip clip-video" style="left: 64%; width: 36%;">03_Outro_CTA</div>
+                                </div>
+                            </div>
+                            
+                            <!-- Track A1: Voice Over -->
+                            <div class="timeline-track-row">
+                                <div class="track-label"><i class="fa-solid fa-microphone"></i> A1 Audio</div>
+                                <div class="track-clips">
+                                    <div class="clip clip-audio" style="left: 0%; width: 22%;">VO_Intro.wav</div>
+                                    <div class="clip clip-audio" style="left: 64%; width: 30%;">VO_CTA.wav</div>
+                                </div>
+                            </div>
+                            
+                            <!-- Track A2: Music Track -->
+                            <div class="timeline-track-row">
+                                <div class="track-label"><i class="fa-solid fa-music"></i> A2 Music</div>
+                                <div class="track-clips">
+                                    <div class="clip clip-sfx" style="left: 22%; width: 10%;">Whoosh.wav</div>
+                                    <div class="clip clip-music" style="left: 0%; width: 100%;">Cinematic_Beat.mp3</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="why-content scroll-reveal" style="transition-delay: 0.1s;">
+                    <span class="section-tag">Why NS Crews?</span>
+                    <h2 class="section-title">Visuals that Speak. Stories that Stay.</h2>
+                    
+                    <ul class="why-list">
+                        <li>
+                            <div class="why-list-icon"><i class="fa-solid fa-lightbulb"></i></div>
+                            <div>
+                                <h4>Creativity First</h4>
+                                <p>Every project receives a unique creative approach based on the brand and its audience.</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="why-list-icon"><i class="fa-solid fa-circle-check"></i></div>
+                            <div>
+                                <h4>Quality Visuals</h4>
+                                <p>We focus on clean, professional, and engaging visuals from shooting to final delivery.</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="why-list-icon"><i class="fa-solid fa-film"></i></div>
+                            <div>
+                                <h4>Story-Driven Editing</h4>
+                                <p>We don't simply edit clips — we create a story that keeps viewers watching.</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="why-list-icon"><i class="fa-solid fa-users"></i></div>
+                            <div>
+                                <h4>Client-Focused Approach</h4>
+                                <p>We understand the client's vision and work closely to turn their ideas into reality.</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="why-list-icon"><i class="fa-solid fa-fire"></i></div>
+                            <div>
+                                <h4>Young & Passionate Team</h4>
+                                <p>Built with fresh ideas, modern visual styles, and a strong passion for photography and filmmaking.</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Approach (Workflow) Section -->
+    <section id="process" class="process-section section-padding">
+        <div class="container">
+            <div class="section-header text-center scroll-reveal">
+                <span class="section-tag">Our Approach</span>
+                <h2 class="section-title">How We Bring Ideas to Life</h2>
+            </div>
+            
+            <div class="process-timeline">
+                <!-- Step 1 -->
+                <div class="process-step scroll-reveal">
+                    <div class="step-num">01</div>
+                    <div class="step-card">
+                        <h3 class="step-title">Understand</h3>
+                        <p class="step-text">We first understand your brand, requirements, target audience, and creative vision.</p>
+                    </div>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="process-step scroll-reveal">
+                    <div class="step-num">02</div>
+                    <div class="step-card">
+                        <h3 class="step-title">Plan</h3>
+                        <p class="step-text">We develop the right concept, shooting plan, visual style, and content strategy.</p>
+                    </div>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="process-step scroll-reveal">
+                    <div class="step-num">03</div>
+                    <div class="step-card">
+                        <h3 class="step-title">Create</h3>
+                        <p class="step-text">Our team captures high-quality visuals with attention to composition, lighting, movement, and storytelling.</p>
+                    </div>
+                </div>
+
+                <!-- Step 4 -->
+                <div class="process-step scroll-reveal">
+                    <div class="step-num">04</div>
+                    <div class="step-card">
+                        <h3 class="step-title">Edit</h3>
+                        <p class="step-text">We transform raw footage into polished, engaging, and professional content.</p>
+                    </div>
+                </div>
+
+                <!-- Step 5 -->
+                <div class="process-step scroll-reveal">
+                    <div class="step-num">05</div>
+                    <div class="step-card">
+                        <h3 class="step-title">Deliver</h3>
+                        <p class="step-text">The final content is optimized for your required platform — Instagram, YouTube, advertisements, websites, and more.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Work / Portfolio Grid Section -->
+    <section id="work" class="work-section section-padding">
+        <div class="container">
+            <div class="section-header text-center scroll-reveal">
+                <span class="section-tag">Our Work</span>
+                <h2 class="section-title">From Concept to Final Frame</h2>
+            </div>
+
+            <!-- Portfolio Filter Tags -->
+            <div class="portfolio-filters scroll-reveal">
+                <button class="filter-btn active" data-filter="all">All Work</button>
+                <button class="filter-btn" data-filter="promo">Promotional</button>
+                <button class="filter-btn" data-filter="reels">Reels & Short-Form</button>
+                <button class="filter-btn" data-filter="product">Product Shoots</button>
+                <button class="filter-btn" data-filter="events">Event Videos</button>
+            </div>
+
+            <!-- Empty Spaces for Video Portfolio Items (Styled Card Players) -->
+            <div class="portfolio-grid">
+                <!-- Item 1: Brand Promotional Video -->
+                <div class="portfolio-item scroll-reveal" data-category="promo">
+                    <div class="portfolio-video-box">
+                        <div class="video-placeholder focus-target">
+                            <!-- Autofocus corner brackets -->
+                            <div class="focus-bracket bracket-tl"></div>
+                            <div class="focus-bracket bracket-tr"></div>
+                            <div class="focus-bracket bracket-bl"></div>
+                            <div class="focus-bracket bracket-br"></div>
+                            
+                            <!-- Viewfinder HUD -->
+                            <div class="viewfinder-hud">
+                                <div class="hud-top">
+                                    <div class="hud-rec"><span class="rec-dot"></span>REC</div>
+                                </div>
+                                <div class="hud-center"><div class="hud-crosshair"></div></div>
+                                <div class="hud-bottom">
+                                    <div class="hud-settings">1/60s F2.8 ISO 200</div>
+                                </div>
+                            </div>
+
+                            <div class="video-overlay">
+                                <div class="play-btn-small" role="button" tabindex="0" aria-label="Play Brand Promotional Video" onclick="playInlineVideo(this, 'video 1.mp4')">
+                                    <i class="fa-solid fa-play"></i>
+                                </div>
+                                <span class="video-card-category">Promotional Video</span>
+                                <h4 class="video-card-title">Brand Promotional Video</h4>
+                            </div>
+                            <video class="placeholder-video-tag" loop muted playsinline>
+                                <source src="" type="video/mp4">
+                            </video>
+                        </div>
+                    </div>
+                </div>
+ 
+                <!-- Item 2: Instagram Reel / Short Form -->
+                <div class="portfolio-item scroll-reveal" data-category="reels" style="transition-delay: 0.1s;">
+                    <div class="portfolio-video-box vertical-box">
+                        <div class="video-placeholder focus-target">
+                            <!-- Autofocus corner brackets -->
+                            <div class="focus-bracket bracket-tl"></div>
+                            <div class="focus-bracket bracket-tr"></div>
+                            <div class="focus-bracket bracket-bl"></div>
+                            <div class="focus-bracket bracket-br"></div>
+                            
+                            <!-- Viewfinder HUD -->
+                            <div class="viewfinder-hud">
+                                <div class="hud-top">
+                                    <div class="hud-rec"><span class="rec-dot"></span>REC</div>
+                                </div>
+                                <div class="hud-center"><div class="hud-crosshair"></div></div>
+                                <div class="hud-bottom">
+                                    <div class="hud-settings">1/120s F1.8 ISO 400</div>
+                                </div>
+                            </div>
+
+                            <div class="video-overlay">
+                                <style></style>
+                                <div class="play-btn-small" role="button" tabindex="0" aria-label="Play Creative Reels Editing" onclick="playInlineVideo(this, 'video 2.mp4')">
+                                    <i class="fa-solid fa-play"></i>
+                                </div>
+                                <span class="video-card-category">Instagram Reel</span>
+                                <h4 class="video-card-title">Creative Reels Editing</h4>
+                            </div>
+                            <video class="placeholder-video-tag" loop muted playsinline>
+                                <source src="" type="video/mp4">
+                            </video>
+                        </div>
+                    </div>
+                </div>
+ 
+                <!-- Item 3: Product Shoot Video -->
+                <div class="portfolio-item scroll-reveal" data-category="product" style="transition-delay: 0.2s;">
+                    <div class="portfolio-video-box">
+                        <div class="video-placeholder focus-target">
+                            <!-- Autofocus corner brackets -->
+                            <div class="focus-bracket bracket-tl"></div>
+                            <div class="focus-bracket bracket-tr"></div>
+                            <div class="focus-bracket bracket-bl"></div>
+                            <div class="focus-bracket bracket-br"></div>
+                            
+                            <!-- Viewfinder HUD -->
+                            <div class="viewfinder-hud">
+                                <div class="hud-top">
+                                    <div class="hud-rec"><span class="rec-dot"></span>REC</div>
+                                </div>
+                                <div class="hud-center"><div class="hud-crosshair"></div></div>
+                                <div class="hud-bottom">
+                                    <div class="hud-settings">1/100s F2.0 ISO 100</div>
+                                </div>
+                            </div>
+
+                            <div class="video-overlay">
+                                <div class="play-btn-small" role="button" tabindex="0" aria-label="Play Product and Brand Video" onclick="playInlineVideo(this, 'video 3.mp4')">
+                                    <i class="fa-solid fa-play"></i>
+                                </div>
+                                <span class="video-card-category">Product shoot</span>
+                                <h4 class="video-card-title">Product & Brand Video</h4>
+                            </div>
+                            <video class="placeholder-video-tag" loop muted playsinline>
+                                <source src="" type="video/mp4">
+                            </video>
+                        </div>
+                    </div>
+                </div>
+ 
+                <!-- Item 4: Business Promotional Video -->
+                <div class="portfolio-item scroll-reveal" data-category="promo">
+                    <div class="portfolio-video-box">
+                        <div class="video-placeholder focus-target">
+                            <!-- Autofocus corner brackets -->
+                            <div class="focus-bracket bracket-tl"></div>
+                            <div class="focus-bracket bracket-tr"></div>
+                            <div class="focus-bracket bracket-bl"></div>
+                            <div class="focus-bracket bracket-br"></div>
+                            
+                            <!-- Viewfinder HUD -->
+                            <div class="viewfinder-hud">
+                                <div class="hud-top">
+                                    <div class="hud-rec"><span class="rec-dot"></span>REC</div>
+                                </div>
+                                <div class="hud-center"><div class="hud-crosshair"></div></div>
+                                <div class="hud-bottom">
+                                    <div class="hud-settings">1/60s F2.8 ISO 320</div>
+                                </div>
+                            </div>
+
+                            <div class="video-overlay">
+                                <div class="play-btn-small" role="button" tabindex="0" aria-label="Play Business Promotional Content" onclick="playInlineVideo(this, 'video 1.mp4')">
+                                    <i class="fa-solid fa-play"></i>
+                                </div>
+                                <span class="video-card-category">Promotional Video</span>
+                                <h4 class="video-card-title">Business Promotional Content</h4>
+                            </div>
+                            <video class="placeholder-video-tag" loop muted playsinline>
+                                <source src="" type="video/mp4">
+                            </video>
+                        </div>
+                    </div>
+                </div>
+ 
+                <!-- Item 5: Event Coverage -->
+                <div class="portfolio-item scroll-reveal" data-category="events" style="transition-delay: 0.1s;">
+                    <div class="portfolio-video-box">
+                        <div class="video-placeholder focus-target">
+                            <!-- Autofocus corner brackets -->
+                            <div class="focus-bracket bracket-tl"></div>
+                            <div class="focus-bracket bracket-tr"></div>
+                            <div class="focus-bracket bracket-bl"></div>
+                            <div class="focus-bracket bracket-br"></div>
+                            
+                            <!-- Viewfinder HUD -->
+                            <div class="viewfinder-hud">
+                                <div class="hud-top">
+                                    <div class="hud-rec"><span class="rec-dot"></span>REC</div>
+                                </div>
+                                <div class="hud-center"><div class="hud-crosshair"></div></div>
+                                <div class="hud-bottom">
+                                    <div class="hud-settings">1/50s F4.0 ISO 800</div>
+                                </div>
+                            </div>
+
+                            <div class="video-overlay">
+                                <div class="play-btn-small" role="button" tabindex="0" aria-label="Play Event and Function Video" onclick="playInlineVideo(this, 'video 2.mp4')">
+                                    <i class="fa-solid fa-play"></i>
+                                </div>
+                                <span class="video-card-category">Event Video</span>
+                                <h4 class="video-card-title">Event & Function Video</h4>
+                            </div>
+                            <video class="placeholder-video-tag" loop muted playsinline>
+                                <source src="" type="video/mp4">
+                            </video>
+                        </div>
+                    </div>
+                </div>
+ 
+                <!-- Item 6: Short Form content -->
+                <div class="portfolio-item scroll-reveal" data-category="reels" style="transition-delay: 0.2s;">
+                    <div class="portfolio-video-box vertical-box">
+                        <div class="video-placeholder focus-target">
+                            <!-- Autofocus corner brackets -->
+                            <div class="focus-bracket bracket-tl"></div>
+                            <div class="focus-bracket bracket-tr"></div>
+                            <div class="focus-bracket bracket-bl"></div>
+                            <div class="focus-bracket bracket-br"></div>
+                            
+                            <!-- Viewfinder HUD -->
+                            <div class="viewfinder-hud">
+                                <div class="hud-top">
+                                    <div class="hud-rec"><span class="rec-dot"></span>REC</div>
+                                </div>
+                                <div class="hud-center"><div class="hud-crosshair"></div></div>
+                                <div class="hud-bottom">
+                                    <div class="hud-settings">1/120s F1.4 ISO 200</div>
+                                </div>
+                            </div>
+
+                            <div class="video-overlay">
+                                <div class="play-btn-small" role="button" tabindex="0" aria-label="Play Personal Branding Content" onclick="playInlineVideo(this, 'video 3.mp4')">
+                                    <i class="fa-solid fa-play"></i>
+                                </div>
+                                <span class="video-card-category">Short-form</span>
+                                <h4 class="video-card-title">Personal Branding Content</h4>
+                            </div>
+                            <video class="placeholder-video-tag" loop muted playsinline>
+                                <source src="" type="video/mp4">
+                            </video>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mission & Vision Section -->
+    <section class="mission-vision-section section-padding">
+        <div class="container">
+            <div class="mv-grid">
+                <!-- Mission Card -->
+                <div class="mv-card scroll-reveal">
+                    <div class="mv-icon"><i class="fa-solid fa-bullseye"></i></div>
+                    <h3 class="mv-title">Our Mission</h3>
+                    <p class="mv-text">To help businesses and individuals build a stronger identity through creative, meaningful, and professional visual content.</p>
+                    <p class="mv-subtext">We want to make high-quality visual storytelling accessible to growing businesses while continuously developing our creativity, technology, and filmmaking skills.</p>
+                </div>
+                
+                <!-- Vision Card -->
+                <div class="mv-card scroll-reveal" style="transition-delay: 0.2s;">
+                    <div class="mv-icon"><i class="fa-solid fa-eye"></i></div>
+                    <h3 class="mv-title">Our Vision</h3>
+                    <div class="vision-words">
+                        <span class="vision-word">Build.</span>
+                        <span class="vision-word">Create.</span>
+                        <span class="vision-word">Inspire.</span>
+                    </div>
+                    <p class="mv-text">Our vision is to grow NS Crews into a trusted creative media brand known for quality video production, innovative editing, powerful storytelling, and strong client relationships.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Founder Spotlight Section -->
+    <section class="founder-section section-padding">
+        <div class="container">
+            <div class="founder-grid">
+                <div class="founder-img-box scroll-reveal">
+                    <div class="founder-placeholder">
+                        <img class="founder-photo" src="surya.jpeg" alt="M. Surya, founder of NS Crews">
+                        <div class="founder-name-overlay" style="color: aliceblue;">M. Surya</div>
+                    </div>
+                </div>
+                <div class="founder-content scroll-reveal" style="transition-delay: 0.1s;">
+                    <span class="section-tag">Founder</span>
+                    <h2 class="section-title">M. Surya</h2>
+                    <span class="founder-subtitle">Founder & Creative Visual Director</span>
+                    <p class="founder-desc">NS Crews was founded by M. Surya, a young entrepreneur and passionate visual creator with a strong interest in videography, video editing, creative content, and digital branding.</p>
+                    <p class="founder-desc">With a vision to transform ideas into impactful visuals, M. Surya started NS Crews and continues to develop the company through creativity, hard work, and client-focused service.</p>
+                    <div class="founder-quote">
+                        <i class="fa-solid fa-quote-left quote-icon-small"></i>
+                        <span>Start Small. Create Big.</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Let's Create Section (Contact Form & details) -->
+    <section id="contact" class="contact-section section-padding">
+        <div class="container">
+            <div class="contact-box scroll-reveal">
+                <div class="contact-grid">
+                    <div class="contact-info">
+                        <h2 class="contact-title">Let's Create Something Great</h2>
+                        <p class="contact-subtitle">Have a brand, business, event, product, or idea that needs powerful visuals? Let's turn your vision into content that people remember.</p>
+                        
+                        <div class="contact-info-list">
+                            <div class="contact-info-item">
+                                <div class="info-icon"><i class="fa-solid fa-circle-check"></i></div>
+                                <span>10+ Business Partners</span>
+                            </div>
+                            <div class="contact-info-item">
+                                <div class="info-icon"><i class="fa-solid fa-star"></i></div>
+                                <span>1+ Year Experience</span>
+                            </div>
+                            <div class="contact-info-item">
+                                <div class="info-icon"><i class="fa-solid fa-envelope"></i></div>
+                                <span>info@nscrews.com</span>
+                            </div>
+                        </div>
+
+                        <div class="social-links">
+                            <a href="#" class="social-btn" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                            <a href="#" class="social-btn" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+                            <a href="https://wa.me/#" class="social-btn whatsapp" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-form-wrapper">
+                        <form class="contact-form" id="contactForm">
+                            <div class="form-group">
+                                <label for="name">Your Name</label>
+                                <input type="text" id="name" required placeholder="John Doe">
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email Address</label>
+                                <input type="email" id="email" required placeholder="john@example.com">
+                            </div>
+                            <div class="form-group">
+                                <label for="interest">Interested In</label>
+                                <select id="interest">
+                                    <option value="video-shoot">🎥 Professional Video Shoot</option>
+                                    <option value="video-editing">✂️ Video Editing</option>
+                                    <option value="social-media">📱 Social Media Reels</option>
+                                    <option value="product-video">🛍️ Product & Brand Videos</option>
+                                    <option value="event-coverage">🎬 Event Coverage</option>
+                                    <option value="other">Other Visual Content</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="message">Your Project Details</label>
+                                <textarea id="message" rows="4" required placeholder="Tell us about your brand or idea..."></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-block">Send Message</button>
+                            <div id="formFeedback" class="form-feedback hidden"></div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container footer-container">
+            <div class="footer-left">
+                <a href="#" class="logo footer-logo">
+                    <span class="logo-accent">NS</span> CREWS
+                </a>
+                <p class="footer-tagline">Your Vision. Our Frames. One Powerful Story.</p>
+            </div>
+            
+            <div class="footer-right">
+                <p>&copy; 2026 NS Crews. All rights reserved.</p>
+                <p class="footer-credits">Created by M. Surya</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Video Modal Player (For playing sample videos when clicking play buttons) -->
+    <div class="video-modal" id="videoModal">
+        <div class="modal-overlay" onclick="closeVideoModal()"></div>
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeVideoModal()">&times;</button>
+            <div class="modal-video-container">
+                <video id="modalVideo" controls loop playsinline>
+                    <source src="" type="video/mp4">
+                    Your browser does not support HTML5 video.
+                </video>
+            </div>
+        </div>
+    </div>
+
+    <!-- Custom JavaScript Link -->
+    <script src="script.js"></script>
+</body>
+</html>
