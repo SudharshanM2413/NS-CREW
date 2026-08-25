@@ -370,6 +370,76 @@ img, video {
     align-items: flex-start;
 }
 
+/* Staggered hero copy gives the first viewport a deliberate reveal. */
+.hero-animate {
+    opacity: 0;
+    animation-duration: 0.9s;
+    animation-fill-mode: both;
+    animation-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.hero-animate-left {
+    animation-name: textFadeFromLeft;
+    animation-delay: 0.15s;
+}
+
+.hero-animate-right {
+    animation-name: textFadeFromRight;
+    animation-delay: 0.3s;
+}
+
+.hero-animate-fade {
+    animation-name: textFadeIn;
+    animation-delay: 0.5s;
+}
+
+.hero-animate-up {
+    animation-name: textFadeUp;
+    animation-delay: 0.65s;
+}
+
+@keyframes textFadeFromLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-34px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes textFadeFromRight {
+    from {
+        opacity: 0;
+        transform: translateX(34px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes textFadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes textFadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(24px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 .hero-tagline {
     font-family: var(--font-body);
     font-size: 0.95rem;
@@ -1574,9 +1644,51 @@ img, video {
     transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
+.scroll-reveal.from-left {
+    transform: translateX(-48px);
+}
+
+.scroll-reveal.from-right {
+    transform: translateX(48px);
+}
+
+.scroll-reveal.zoom-in {
+    transform: scale(0.94);
+}
+
+.scroll-reveal.fade-only {
+    transform: none;
+}
+
 .scroll-reveal.revealed {
     opacity: 1;
     transform: translateY(0);
+}
+
+.scroll-reveal.from-left.revealed,
+.scroll-reveal.from-right.revealed {
+    transform: translateX(0);
+}
+
+.scroll-reveal.zoom-in.revealed {
+    transform: scale(1);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+
+    .hero-animate,
+    .scroll-reveal {
+        opacity: 1;
+        transform: none;
+    }
 }
 
 /* ==========================================================================
