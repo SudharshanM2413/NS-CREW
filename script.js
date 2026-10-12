@@ -24,15 +24,17 @@ document.addEventListener('DOMContentLoaded', () => {
     const navLinks = document.querySelectorAll('.nav-link');
 
     hamburgerBtn.addEventListener('click', () => {
-        hamburgerBtn.classList.toggle('active');
-        navMenu.classList.toggle('active');
-        document.body.classList.toggle('overflow-hidden'); // Prevent background scroll when menu is open
+        const isOpen = hamburgerBtn.classList.toggle('active');
+        navMenu.classList.toggle('active', isOpen);
+        hamburgerBtn.setAttribute('aria-expanded', String(isOpen));
+        document.body.classList.toggle('overflow-hidden', isOpen);
     });
 
     navLinks.forEach(link => {
         link.addEventListener('click', () => {
             hamburgerBtn.classList.remove('active');
             navMenu.classList.remove('active');
+            hamburgerBtn.setAttribute('aria-expanded', 'false');
             document.body.classList.remove('overflow-hidden');
             
             // Set active class link manually
@@ -135,6 +137,21 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
+    const portfolioGrid = document.querySelector('.portfolio-grid');
+    document.querySelectorAll('.portfolio-scroll-btn').forEach(button => {
+        button.addEventListener('click', () => {
+            const direction = Number(button.getAttribute('data-scroll-direction'));
+            const visibleItem = [...portfolioGrid.querySelectorAll('.portfolio-item')]
+                .find(item => getComputedStyle(item).display !== 'none');
+            const itemWidth = visibleItem ? visibleItem.getBoundingClientRect().width : portfolioGrid.clientWidth;
+            const gap = Number.parseFloat(getComputedStyle(portfolioGrid).columnGap) || 0;
+            portfolioGrid.scrollBy({
+                left: direction * (itemWidth + gap),
+                behavior: 'smooth'
+            });
+        });
+    });
+
     // 6. CONTACT FORM SIMULATION & VISUAL FEEDBACK
     const contactForm = document.getElementById('contactForm');
     const formFeedback = document.getElementById('formFeedback');
@@ -169,7 +186,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 // 7. INLINE PORTFOLIO VIDEO PLAYER
-// Plays the video belonging to the clicked portfolio card.
+// Plays the video strictly inside the clicked portfolio card box.
 window.playInlineVideo = (playButton, videoSrc) => {
     const videoPlaceholder = playButton.closest('.video-placeholder');
     const video = videoPlaceholder ? videoPlaceholder.querySelector('.placeholder-video-tag') : null;
@@ -178,16 +195,29 @@ window.playInlineVideo = (playButton, videoSrc) => {
         return;
     }
 
-    if (!video.src || video.src !== new URL(videoSrc, document.baseURI).href) {
+    // Stop all other playing inline videos in the portfolio grid
+    document.querySelectorAll('.placeholder-video-tag').forEach(v => {
+        if (v !== video && !v.paused) {
+            v.pause();
+            v.closest('.video-placeholder').classList.remove('is-playing');
+        }
+    });
+
+    // Set the video source dynamically if it hasn't been set yet
+    if (!video.getAttribute('src') || video.getAttribute('src') !== videoSrc) {
         video.src = videoSrc;
         video.load();
     }
 
+    // Reveal native controls inside the box and unmute
     video.controls = true;
+    video.muted = false;
+
+    // Play the video inline
     video.play().then(() => {
         videoPlaceholder.classList.add('is-playing');
     }).catch(error => {
-        console.log("Inline video playback failed, waiting for user click.", error);
+        console.error("Inline video playback failed, waiting for user click.", error);
     });
 };
 

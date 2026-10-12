@@ -53,6 +53,7 @@
     <header class="main-header">
         <div class="container header-container">
             <a href="#" class="logo">
+                <img src="NS logo.png" alt="" class="logo-img">
                 <span class="logo-accent">NS</span> CREWS
             </a>
             
@@ -67,7 +68,7 @@
                 </ul>
             </nav>
 
-            <button class="hamburger" id="hamburgerBtn" aria-label="Toggle menu">
+            <button class="hamburger" id="hamburgerBtn" aria-label="Toggle menu" aria-controls="navMenu" aria-expanded="false">
                 <span class="bar"></span>
                 <span class="bar"></span>
                 <span class="bar"></span>
@@ -80,14 +81,14 @@
         <div class="hero-bg-overlay"></div>
         <div class="container hero-container">
             <div class="hero-content">
-                <span class="hero-tagline">Visuals That Speak. Stories That Stay.</span>
-                <h1 class="hero-title">Turning Ideas Into <span class="text-gradient">Visual Stories</span></h1>
-                <p class="hero-subtitle">We are a young and creative visual media company focused on professional video shoots, video editing, brand content, and social media visuals.</p>
-                <div class="hero-actions">
+                <span class="hero-tagline hero-animate hero-animate-left">Visuals That Speak. Stories That Stay.</span>
+                <h1 class="hero-title hero-animate hero-animate-right">Turning Ideas Into <span class="text-gradient">Visual Stories</span></h1>
+                <p class="hero-subtitle hero-animate hero-animate-fade">We are a young and creative visual media company focused on professional video shoots, video editing, brand content, and social media visuals.</p>
+                <div class="hero-actions hero-animate hero-animate-up">
                     <a href="#work" class="btn btn-primary">Explore Our Work</a>
                     <a href="#contact" class="btn btn-secondary">Get in Touch</a>
                 </div>
-                <div class="hero-credits">
+                <div class="hero-credits hero-animate hero-animate-fade">
                     <span class="credits-text">Founded by <span class="credits-name">M. Surya</span></span>
                 </div>
             </div>
@@ -121,18 +122,19 @@
                     </div>
 
                     <div class="video-overlay">
-                        <div class="play-btn-circle" onclick="openVideoModal('https://www.w3schools.com/html/mov_bbb.mp4')">
-                            <i class="fa-solid fa-play"></i>
-                        </div>
-                        <span class="play-label">Watch Showreel</span>
-                        <div class="video-info-badge">
-                            <i class="fa-solid fa-film"></i> NS Crews Showreel 2026
-                        </div>
-                    </div>
-                    <!-- Empty/Fallback video container (Add your video source path here) -->
-                    <video class="placeholder-video-tag" loop muted autoplay playsinline>
-                        <source src="" type="video/mp4">
-                    </video>
+    <!-- Changed function call here -->
+    <div class="play-btn-circle" onclick="playInlineVideo(this, 'video 1.mp4')">
+        <i class="fa-solid fa-play"></i>
+    </div>
+    <span class="play-label">Watch Showreel</span>
+    <div class="video-info-badge">
+        <i class="fa-solid fa-film"></i> NS Crews Showreel 2026
+    </div>
+</div>
+<!-- Empty/Fallback video container (Add your video source path here) -->
+<video class="placeholder-video-tag" loop muted playsinline>
+    <source src="" type="video/mp4">
+</video>
                 </div>
             </div>
         </div>
@@ -168,7 +170,7 @@
     <section id="about" class="about-section section-padding">
         <div class="container">
             <div class="about-grid">
-                <div class="about-content scroll-reveal">
+                <div class="about-content scroll-reveal from-left">
                     <span class="section-tag">About NS Crews</span>
                     <h2 class="section-title">Turning Ideas Into <span class="text-gradient">Visual Stories</span></h2>
                     <p class="about-desc">At NS Crews, we believe every brand has a story worth telling. We specialize in creating high-quality videos and creative visual content that help businesses present themselves professionally and build a strong digital presence.</p>
@@ -180,7 +182,7 @@
                         <div class="goal-badge">Elevate</div>
                     </div>
                 </div>
-                <div class="about-quote-card scroll-reveal focus-target" style="transition-delay: 0.2s;">
+                <div class="about-quote-card scroll-reveal from-right focus-target" style="transition-delay: 0.2s;">
                     <!-- Autofocus corner brackets -->
                     <div class="focus-bracket bracket-tl"></div>
                     <div class="focus-bracket bracket-tr"></div>
@@ -320,7 +322,7 @@
     <section class="why-section section-padding">
         <div class="container">
             <div class="why-grid">
-                <div class="why-visual scroll-reveal">
+                <div class="why-visual scroll-reveal zoom-in">
                     <!-- Video Editing Timeline Widget -->
                     <div class="timeline-widget-container focus-target">
                         <!-- Autofocus corner brackets -->
@@ -391,7 +393,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="why-content scroll-reveal" style="transition-delay: 0.1s;">
+                <div class="why-content scroll-reveal from-right" style="transition-delay: 0.1s;">
                     <span class="section-tag">Why NS Crews?</span>
                     <h2 class="section-title">Visuals that Speak. Stories that Stay.</h2>
                     
@@ -512,7 +514,8 @@
             </div>
 
             <!-- Empty Spaces for Video Portfolio Items (Styled Card Players) -->
-            <div class="portfolio-grid">
+            <div class="portfolio-carousel">
+                <div class="portfolio-grid">
                 <!-- Item 1: Brand Promotional Video -->
                 <div class="portfolio-item scroll-reveal" data-category="promo">
                     <div class="portfolio-video-box">
@@ -723,6 +726,15 @@
                         </div>
                     </div>
                 </div>
+                </div>
+                <div class="portfolio-carousel-controls" aria-label="Portfolio navigation">
+                    <button class="portfolio-scroll-btn" type="button" data-scroll-direction="-1" aria-label="Show previous videos">
+                        <i class="fa-solid fa-arrow-left" aria-hidden="true"></i>
+                    </button>
+                    <button class="portfolio-scroll-btn" type="button" data-scroll-direction="1" aria-label="Show next videos">
+                        <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+                    </button>
+                </div>
             </div>
         </div>
     </section>
@@ -798,15 +810,19 @@
                                 <span>1+ Year Experience</span>
                             </div>
                             <div class="contact-info-item">
+                                <div class="info-icon"><i class="fa-solid fa-phone"></i></div>
+                                <a href="tel:7639282976">7639282976</a>
+                            </div>
+                            <div class="contact-info-item">
                                 <div class="info-icon"><i class="fa-solid fa-envelope"></i></div>
                                 <span>info@nscrews.com</span>
                             </div>
                         </div>
 
                         <div class="social-links">
-                            <a href="#" class="social-btn" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                            <a href="https://www.instagram.com/ns_crews?igsi=Y3dxbW04N2NsdHN1" class="social-btn" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
                             <a href="#" class="social-btn" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
-                            <a href="https://wa.me/#" class="social-btn whatsapp" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+                            <a href="https://wa.me/7639282976" class="social-btn whatsapp" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
                         </div>
                     </div>
                     
@@ -856,7 +872,8 @@
             
             <div class="footer-right">
                 <p>&copy; 2026 NS Crews. All rights reserved.</p>
-                <p class="footer-credits">Created by M. Surya</p>
+                <p class="footer-credits">Created by M. Sudharshan</p>
+                <p><a href="https://sudharshan-2413.web.app/" target="_blank" rel="noopener noreferrer">Visit My Portfolio</a></p>
             </div>
         </div>
     </footer>
